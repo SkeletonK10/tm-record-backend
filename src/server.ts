@@ -1,15 +1,8 @@
-import router from "./router";
-import con from "./db";
-
-const Express = require("express");
-
-con.connect((err) => {
-  if (err) throw err;
-  console.log("DB Successfully connected!");
-});
+import Express from 'express';
+import router from './router';
 
 const app = Express();
 
-app.use("/", router);
+app.use('/', router);
 
 export default app;

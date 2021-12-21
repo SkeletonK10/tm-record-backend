@@ -1,14 +1,14 @@
-import { Router } from "express";
+import { Router } from 'express';
 
-import { main_get, non_impl } from "./api";
+import { mainGet, nonImpl } from './api';
 
-import game from "./game";
+import game from './game';
 
 const router = Router();
 
-router.get("/", main_get);
+router.get('/', mainGet);
 
-router.use("/user/", non_impl);
-router.use("/game/", game);
+router.use('/user/', nonImpl);
+router.use('/game/', game);
 
 export default router;

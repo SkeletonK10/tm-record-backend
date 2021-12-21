@@ -1,13 +1,13 @@
-import { RequestHandler } from "express";
+import { RequestHandler } from 'express';
 
-export const main_get = (req, res, next): RequestHandler => {
+export const mainGet = (req, res, next): RequestHandler => {
   res
     .status(200)
-    .json({ text: "GO WORK FRONTEND WE DO NOT HAVE ANY INFORMATION FOR IT" });
+    .json({ text: 'GO WORK FRONTEND WE DO NOT HAVE ANY INFORMATION FOR IT' });
   return next();
 };
 
-export const non_impl = (req, res, next): RequestHandler => {
-  res.status(501).json({ text: "No implementation here" });
+export const nonImpl = (req, res, next): RequestHandler => {
+  res.status(501).json({ text: 'No implementation here' });
   return next();
 };

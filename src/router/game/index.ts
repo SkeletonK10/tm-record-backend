@@ -1,9 +1,9 @@
-import { Router } from "express";
+import { Router } from 'express';
 
-import { non_impl } from "./api";
+import { nonImpl } from './api';
 
 const router = Router();
 
-router.get("/", non_impl);
+router.get('/', nonImpl);
 
 export default router;
