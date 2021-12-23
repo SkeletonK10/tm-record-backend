@@ -1,4 +1,5 @@
 import { Column, Entity, ManyToOne, PrimaryColumn } from 'typeorm';
+import Corporation from './corporation';
 import Game from './game';
 import User from './user';
 
@@ -27,6 +28,9 @@ export default class Result {
     default: Color.UNKNOWN,
   })
   color: Color;
+
+  @ManyToOne(() => Corporation)
+  corporation!: Corporation;
 
   @Column()
   rank!: number;

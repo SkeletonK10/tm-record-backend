@@ -1,4 +1,11 @@
-import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Column,
+  Entity,
+  ManyToOne,
+  OneToMany,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
+import Extension from './extension';
 import Result from './result';
 
 @Entity()
@@ -14,4 +21,7 @@ export default class Game {
 
   @OneToMany(() => Result, result => result.game)
   results: Result[];
+
+  @ManyToOne(() => Extension)
+  extensions: Extension[];
 }
