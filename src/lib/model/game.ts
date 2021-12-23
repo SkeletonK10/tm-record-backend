@@ -3,9 +3,11 @@ import {
   Entity,
   ManyToOne,
   OneToMany,
+  OneToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
 import Extension from './extension';
+import Map from './map';
 import Result from './result';
 
 @Entity()
@@ -19,9 +21,12 @@ export default class Game {
   @Column()
   season: number | null; // null: Pre-Season
 
-  @OneToMany(() => Result, result => result.game)
-  results: Result[];
+  @OneToOne(() => Map)
+  map!: Map[];
 
   @ManyToOne(() => Extension)
   extensions: Extension[];
+
+  @OneToMany(() => Result, result => result.game)
+  results: Result[];
 }
