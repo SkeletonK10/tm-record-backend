@@ -1,6 +1,6 @@
 import { Router } from 'express';
 
-import { nonImpl } from './api';
+import { nonImpl } from '../../lib/util/api';
 
 const router = Router();
 

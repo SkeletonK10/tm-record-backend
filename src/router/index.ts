@@ -1,6 +1,7 @@
 import { Router } from 'express';
 
-import { mainGet, nonImpl } from './api';
+import { nonImpl } from '../lib/util/api';
+import { mainGet } from './api';
 
 import game from './game';
 
