@@ -12,6 +12,17 @@ enum Color {
   YELLOW = 'Yellow',
 }
 
+/**
+ * A Result of user in the game
+ * @typedef {object} Result
+ * @property {User} user.required - User participated
+ * @property {Game} game.required - Game participated
+ * @property {Color} color - Color played (Default: Unknown)
+ * @property {Corporation} corporation.required - Corporation played
+ * @property {number} rank.required - Rank recorded (1 ~ 5)
+ * @property {number} score.required - Score recorded
+ */
+
 @Entity()
 export default class Result {
   @PrimaryColumn()
