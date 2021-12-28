@@ -7,13 +7,14 @@ const app = Express();
 
 app.use('/', router);
 
-const options = {
+const swaggerOptions = {
   info: {
     version: '1.0.0',
     title: 'tm-record-backend',
     license: {
       name: 'MIT',
     },
+    description: 'Backend server for Terraforming Mars recording system',
   },
   security: {
     BasicAuth: {
@@ -32,6 +33,6 @@ const options = {
   multiple: true,
 };
 
-expressJSDocSwagger(app)(options);
+expressJSDocSwagger(app)(swaggerOptions);
 
 export default app;
