@@ -20,9 +20,9 @@
  * @property {boolean} valid.required - true if the game is successfully over
  * @property {number} season.required - Season participated (Pre-season: 0)
  * @property {number} round.required - Round of the season (Pre-season: 0)
- * @property {Map} map.required - Map played
+ * @property {string} map - Map played
  * @property {array<Extension>} extensions - Extensions played
- * @property {array<Result>} results.required - Results engaged
+ * @property {array<Result>} results - Results engaged
  */
 
 /**
@@ -37,10 +37,10 @@
  * @typedef {object} Result
  * @property {User} user.required - User participated
  * @property {Game} game.required - Game participated
- * @property {string} color.required - Color played (Default: Unknown) - enum: Black, Blue, Green, Red, Unknown, Yellow
- * @property {Corporation} corporation.required - Corporation played
- * @property {number} rank.required - Rank recorded (1 ~ 5)
- * @property {number} score.required - Score recorded
+ * @property {string} color - Color played
+ * @property {Corporation} corporation - Corporation played
+ * @property {number} rank - Rank recorded (1 ~ 5)
+ * @property {number} score - Score recorded
  */
 
 /**
