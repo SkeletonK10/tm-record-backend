@@ -21,7 +21,7 @@
  * @property {number} season.required - Season participated (Pre-season: 0)
  * @property {number} round.required - Round of the season (Pre-season: 0)
  * @property {string} map - Map played
- * @property {array<Extension>} extensions - Extensions played
+ * @property {array<string>} extensions - Extensions played
  * @property {array<Result>} results - Results engaged
  */
 
@@ -36,9 +36,9 @@
  * A Result of user in the game
  * @typedef {object} Result
  * @property {User} user.required - User participated
- * @property {Game} game.required - Game participated
+ * @property {number} game.required - Game id participated
  * @property {string} color - Color played
- * @property {Corporation} corporation - Corporation played
+ * @property {string} corporation - Corporation played
  * @property {number} rank - Rank recorded (1 ~ 5)
  * @property {number} score - Score recorded
  */
