@@ -2,13 +2,13 @@ import { Column, Entity, ManyToOne, PrimaryColumn } from 'typeorm';
 import Color from './color';
 import Corporation from './corporation';
 import Game from './game';
-import User from './user';
+import Player from './player';
 
 @Entity()
 export default class Result {
   @PrimaryColumn()
-  @ManyToOne(() => User, user => user.results)
-  user!: User;
+  @ManyToOne(() => Player, player => player.results)
+  player!: Player;
 
   @PrimaryColumn()
   @ManyToOne(() => Game, game => game.results)
